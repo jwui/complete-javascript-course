@@ -15,24 +15,24 @@ Test data:
 m tall.
 § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
 m tall. 
-
-let markWeight1 = 78;
-let markHeight1 = 1.69;
-let johnWeight1 = 92;
-let johnHeight1 = 1.95;
-let markWeight2 = 95;
-let markHeight2 = 1.88;
-let johnWeight2 = 85;
-let johnHeight2 = 1.76;
-
-let markBMI1 = markWeight1 / markHeight1 ** 2;
-let johnBMI1 = johnWeight1 / johnHeight1 ** 2;
-let markBMI2 = markWeight2 / markHeight2 ** 2;
-let johnBMI2 = johnWeight2 / johnHeight2 ** 2;
-
-markHigherBMI1 = console.log(markBMI1 > johnBMI1);
-markHigherBMI2 = console.log(markBMI2 > johnBMI2);
  */
+
+// let markWeight1 = 78;
+// let markHeight1 = 1.69;
+// let johnWeight1 = 92;
+// let johnHeight1 = 1.95;
+// let markWeight2 = 95;
+// let markHeight2 = 1.88;
+// let johnWeight2 = 85;
+// let johnHeight2 = 1.76;
+
+// let markBMI1 = markWeight1 / markHeight1 ** 2;
+// let johnBMI1 = johnWeight1 / johnHeight1 ** 2;
+// let markBMI2 = markWeight2 / markHeight2 ** 2;
+// let johnBMI2 = johnWeight2 / johnHeight2 ** 2;
+
+// markHigherBMI1 = console.log(markBMI1 > johnBMI1);
+// markHigherBMI2 = console.log(markBMI2 > johnBMI2);
 
 /* 
 Coding Challenge #2
@@ -44,23 +44,23 @@ is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark
 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
 BMI (28.3) is higher than John's (23.9)!" 
 Hint: Use an if/else statement 😉
-
-let markWeight = 95;
-let markHeight = 1.88;
-let johnWeight = 85;
-let johnHeight = 1.76;
-
-let markBMI = markWeight / markHeight ** 2;
-let johnBMI = johnWeight / johnHeight ** 2;
-
-if (markBMI > johnBMI) {
-  console.log(`Mark's BMI(${markBMI}) is higher than John's (${johnBMI})!`);
-} else if (markBMI == johnBMI) {
-  console.log(`Mark's BMI(${markBMI}) is the same as John's (${johnBMI})!`);
-} else {
-  console.log(`John's BMI(${johnBMI}) is higher than Mark's (${markBMI})!`);
-}
 */
+
+// let markWeight = 95;
+// let markHeight = 1.88;
+// let johnWeight = 85;
+// let johnHeight = 1.76;
+
+// let markBMI = markWeight / markHeight ** 2;
+// let johnBMI = johnWeight / johnHeight ** 2;
+
+// if (markBMI > johnBMI) {
+//   console.log(`Mark's BMI(${markBMI}) is higher than John's (${johnBMI})!`);
+// } else if (markBMI == johnBMI) {
+//   console.log(`Mark's BMI(${markBMI}) is the same as John's (${johnBMI})!`);
+// } else {
+//   console.log(`John's BMI(${johnBMI}) is higher than Mark's (${markBMI})!`);
+// }
 
 /*
 Coding Challenge #3
@@ -83,23 +83,23 @@ Test data:
 § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 GOOD LUCK 😀
-
-DolphinsAverage = (96 + 108 + 89) / 3;
-KoalasAverage = (88 + 91 + 110) / 3;
-console.log(DolphinsAverage, KoalasAverage);
-
-if (DolphinsAverage > KoalasAverage && DolphinsAverage >= 100) {
-  console.log("Dolphins won the trophy!");
-} else if (
-  DolphinsAverage == KoalasAverage &&
-  DolphinsAverage >= 100 &&
-  KoalasAverage >= 100
-) {
-  console.log("It's a draw and both teams get the trophy!");
-} else if (KoalasAverage > DolphinsAverage && KoalasAverage >= 100) {
-  console.log("Koalas won the trophy!");
-} else console.log("No team is qualified for the trophy!");
 */
+
+// DolphinsAverage = (96 + 108 + 89) / 3;
+// KoalasAverage = (88 + 91 + 110) / 3;
+// console.log(DolphinsAverage, KoalasAverage);
+
+// if (DolphinsAverage > KoalasAverage && DolphinsAverage >= 100) {
+//   console.log("Dolphins won the trophy!");
+// } else if (
+//   DolphinsAverage == KoalasAverage &&
+//   DolphinsAverage >= 100 &&
+//   KoalasAverage >= 100
+// ) {
+//   console.log("It's a draw and both teams get the trophy!");
+// } else if (KoalasAverage > DolphinsAverage && KoalasAverage >= 100) {
+//   console.log("Koalas won the trophy!");
+// } else console.log("No team is qualified for the trophy!");
 
 /*
 Coding Challenge #4
@@ -122,11 +122,11 @@ Hints:
 GOOD LUCK 😀
 */
 
-let bill = 275;
-let tip;
-tip = 300 >= bill && bill >= 50 ? (tip = bill * 0.15) : (tip = bill * 0.2);
-console.log(
-  `The bill was ${bill}, the tip was ${tip}, and the total value is ${
-    bill + tip
-  }`
-);
+// let bill = 275;
+// let tip;
+// tip = 300 >= bill && bill >= 50 ? (tip = bill * 0.15) : (tip = bill * 0.2);
+// console.log(
+//   `The bill was ${bill}, the tip was ${tip}, and the total value is ${
+//     bill + tip
+//   }`
+// );
