@@ -69,3 +69,23 @@ values (so don't store the tip values in separate variables first, but right in 
 array) 😉
 GOOD LUCK 😀 
 */
+
+// const calcTip = (bill) => {
+//   if (bill >= 50 && 300 >= bill) {
+//     let tip = 0.15 * bill;
+//     return tip;
+//   } else {
+//     let tip = 0.2 * bill;
+//     return tip;
+//   }
+// };
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(tips);
+// const totals = [
+//   bills[0] + calcTip(bills[0]),
+//   bills[1] + calcTip(bills[1]),
+//   bills[2] + calcTip(bills[2]),
+// ];
+// console.log(totals);

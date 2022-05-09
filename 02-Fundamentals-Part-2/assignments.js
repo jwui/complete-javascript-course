@@ -150,3 +150,65 @@ change the array at that index position. For example, you can search for
 // } else console.log("Probably not a central European country :D");
 // neighbors[neighbors.indexOf("North Korea")] = "Sweden";
 // console.log(neighbors);
+
+/* 
+LECTURE: Introduction to Objects
+1. Create an object called 'myCountry' for a country of your choice, containing
+properties 'country', 'capital', 'language', 'population' and
+'neighbors' (an array like we used in previous assignments) 
+*/
+
+// const myCountry = {
+//   country: "South Korea",
+//   capital: "Seoul",
+//   language: "Korean",
+//   population: "51 million",
+//   neighbors: "Japan, China, North Korea, Taiwan",
+// };
+
+/* 
+LECTURE: Dot vs. Bracket Notation
+1. Using the object from the previous assignment, log a string like this to the
+console: 'Finland has 6 million finnish-speaking people, 3 neighboring countries
+and a capital called Helsinki.'
+2. Increase the country's population by two million using dot notation, and then
+decrease it by two million using brackets notation. 
+*/
+
+// const country = {
+//   countryName: "Finland",
+//   population: 6,
+//   language: "Finnish",
+//   neighbors: 3,
+//   capital: "Helsinki",
+// };
+
+// country.population += 2;
+// country["population"] -= 2;
+
+// console.log(
+//   `${country.countryName} has ${country.population} million ${country.language}-speaking people, ${country.neighbors} neighboring countries and a capital called ${country.capital}.`
+// );
+
+/*
+LECTURE: Object Methods
+1. Add a method called 'describe' to the 'myCountry' object. This method
+will log a string to the console, similar to the string logged in the previous
+assignment, but this time using the 'this' keyword.
+2. Call the 'describe' method
+3. Add a method called 'checkIsland' to the 'myCountry' object. This
+method will set a new property on the object, called 'isIsland'.
+'isIsland' will be true if there are no neighbouring countries, and false if
+there are. Use the ternary operator to set the property.
+*/
+
+const myCcountry = {
+  countryName: "South Korea",
+  population: 51,
+  language: "Korean",
+  neighbors: 3,
+  capital: "Seoul",
+  describe: function () {
+    d;
+  },
+};
