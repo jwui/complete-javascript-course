@@ -198,17 +198,28 @@ assignment, but this time using the 'this' keyword.
 2. Call the 'describe' method
 3. Add a method called 'checkIsland' to the 'myCountry' object. This
 method will set a new property on the object, called 'isIsland'.
-'isIsland' will be true if there are no neighbouring countries, and false if
+'isIsland' will be true if there are no neighboring countries, and false if
 there are. Use the ternary operator to set the property.
 */
 
-const myCcountry = {
+const myCountry = {
   countryName: "South Korea",
   population: 51,
   language: "Korean",
-  neighbors: 3,
+  neighbors: 0,
   capital: "Seoul",
+  checkIsland: () => {
+    if (myCountry.neighbors >= 1) {
+      return (myCountry.isIsland = false);
+    } else return (myCountry.isIsland = true);
+  },
   describe: function () {
-    d;
+    return `${this.countryName} has ${this.population} million ${
+      this.language
+    }-speaking people, a capital called ${this.capital}, and it is ${
+      this.isIsland ? "an" : "not an"
+    } island.`;
   },
 };
+
+console.log(myCountry.describe());
