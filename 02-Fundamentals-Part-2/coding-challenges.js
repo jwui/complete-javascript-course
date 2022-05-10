@@ -194,11 +194,6 @@ let totalValues = function () {
   }
 };
 
-tipValues();
-totalValues();
-console.log(tips);
-console.log(totals);
-
 function calcAverage(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
