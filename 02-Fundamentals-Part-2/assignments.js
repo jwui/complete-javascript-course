@@ -202,24 +202,105 @@ method will set a new property on the object, called 'isIsland'.
 there are. Use the ternary operator to set the property.
 */
 
-const myCountry = {
-  countryName: "South Korea",
-  population: 51,
-  language: "Korean",
-  neighbors: 0,
-  capital: "Seoul",
-  checkIsland: () => {
-    if (myCountry.neighbors >= 1) {
-      return (myCountry.isIsland = false);
-    } else return (myCountry.isIsland = true);
-  },
-  describe: function () {
-    return `${this.countryName} has ${this.population} million ${
-      this.language
-    }-speaking people, a capital called ${this.capital}, and it is ${
-      this.isIsland ? "an" : "not an"
-    } island.`;
-  },
-};
+// const myCountry = {
+//   countryName: "South Korea",
+//   population: 51,
+//   language: "Korean",
+//   neighbors: 0,
+//   capital: "Seoul",
+//   checkIsland: () => {
+//     if (myCountry.neighbors >= 1) {
+//       return (myCountry.isIsland = false);
+//     } else return (myCountry.isIsland = true);
+//   },
+//   describe: function () {
+//     return `${this.countryName} has ${this.population} million ${
+//       this.language
+//     }-speaking people, a capital called ${this.capital}, and it is ${
+//       this.isIsland ? "an" : "not an"
+//     } island.`;
+//   },
+// };
 
-console.log(myCountry.describe());
+// console.log(myCountry.describe());
+
+/* 
+LECTURE: Iteration: The for Loop
+1. There are elections in your country! In a small town, there are only 50 voters.
+Use a for loop to simulate the 50 people voting, by logging a string like this to
+the console (for numbers 1 to 50): 'Voter number 1 is currently voting'
+ */
+
+// for (voter = 1; voter <= 50; voter++) {
+//   console.log(`Voter ${voter} is currently voting`);
+// }
+
+/* 
+LECTURE: Looping Arrays, Breaking and Continuing
+1. Let's bring back the 'populations' array from a previous assignment
+2. Use a for loop to compute an array called 'percentages2' containing the
+percentages of the world population for the 4 population values. Use the
+function 'percentageOfWorld1' that you created earlier
+3. Confirm that 'percentages2' contains exactly the same values as the
+'percentages' array that we created manually in the previous assignment,
+and reflect on how much better this solution is 
+*/
+
+// function percentageOfWorld1(population) {
+//   let worldPopulation = 7900;
+//   let percentagePopulation = ((population / worldPopulation) * 100).toFixed(2);
+//   console.log(`${percentagePopulation}% of the world population`);
+// }
+
+// const populations = [10, 1441, 332, 83];
+// const percentages2 = [];
+// for (let i = 0; i < populations.length; i++) {
+//   const checkValidity = percentageOfWorld1(populations[i]);
+//   percentages2.push(checkValidity);
+// }
+// console.log(percentages2);
+
+/*
+LECTURE: Looping Backwards and Loops in Loops
+1. Store this array of arrays into a variable called 'listOfNeighbors'
+[['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden',
+'Russia']];
+2. Log only the neighboring countries to the console, one by one, not the entire
+arrays. Log a string like 'Neighbor: Canada' for each country
+3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't
+worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+*/
+
+// const listOfNeighbors = [
+//   ["Canada", "Mexico"],
+//   ["Spain"],
+//   ["Norway", "Sweden", "Russia"],
+// ];
+
+// for (let i = 0; i < listOfNeighbors.length; i++) {
+//   for (let y = 0; y < listOfNeighbors[i].length; y++)
+//     console.log(`Neighbor: ${listOfNeighbors[i][y]}`);
+// }
+
+/* 
+LECTURE: The while Loop
+1. Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing',
+but this time using a while loop (call the array 'percentages3')
+2. Reflect on what solution you like better for this task: the for loop or the while
+loop? 
+*/
+
+function percentageOfWorld1(population) {
+  let worldPopulation = 7900;
+  let percentagePopulation = ((population / worldPopulation) * 100).toFixed(2);
+  console.log(`${percentagePopulation}% of the world population`);
+}
+
+const populations = [10, 1441, 332, 83];
+
+const percentages3 = [];
+let i = 0;
+while (i < populations.length) {
+  percentageOfWorld1(populations[i]);
+  i++;
+}
