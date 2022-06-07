@@ -134,40 +134,76 @@ Lewandowski: 2
 GOOD LUCK 😀
 */
 
-// 1.
-const scored = [...game.scored];
-let i = 1;
-for (const scoredNames of scored) console.log(`Goal ${i++}: ${scoredNames}`);
+// // 1.
+// const scored = [...game.scored];
+// let i = 1;
+// for (const scoredNames of scored) console.log(`Goal ${i++}: ${scoredNames}`);
 
-// 2.
-const odds = Object.values(game.odds);
-let sum = 0;
-for (const odd of odds) sum += odd;
-let average = 0;
-average = (sum / odds.length).toFixed(2);
-console.log(average);
+// // 2.
+// const odds = Object.values(game.odds);
+// let sum = 0;
+// for (const odd of odds) sum += odd;
+// let average = (sum / odds.length).toFixed(2);
+// console.log(average);
 
-// 3.
-for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
-  console.log(`Odd of ${teamStr} ${odd}`);
+// // 3.
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
+
+////////////////////////////////////////
+// Coding Challenge #3
+
+/*
+Let's continue with our football betting app! This time, we have a map called
+'gameEvents' (see below) with a log of the events that happened during the
+game. The values are the events themselves, and the keys are the minutes in which
+each event happened (a football game has 90 minutes plus some extra time).
+Your tasks:
+1. Create an array 'events' of the different game events that happened (no
+duplicates)
+2. After the game has finished, is was found that the yellow card from minute 64
+was unfair. So remove this event from the game events log.
+3. Compute and log the following string to the console: "An event happened, on
+average, every 9 minutes" (keep in mind that a game has 90 minutes)
+4. Loop over 'gameEvents' and log each element to the console, marking
+whether it's in the first half or second half (after 45 min) of the game, like this:
+[FIRST HALF] 17: ⚽ GOAL
+GOOD LUCK 😀
+*/
+
+const gameEvents = new Map([
+  [17, "⚽ GOAL"],
+  [36, "🔁 Substitution"],
+  [47, "⚽ GOAL"],
+  [61, "🔁 Substitution"],
+  [64, "🔶 Yellow card"],
+  [69, "🔴 Red card"],
+  [70, "🔁 Substitution"],
+  [72, "🔁 Substitution"],
+  [76, "⚽ GOAL"],
+  [80, "⚽ GOAL"],
+  [92, "🔶 Yellow card"],
+]);
+
+// 1
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+
+// 2
+gameEvents.delete(64);
+console.log(gameEvents);
+
+// 3
+const gameLength = 90;
+
+let average;
+average = gameLength / gameEvents.size;
+console.log(`An event happened, on average, every ${average} minutes`);
+
+// 4
+for (const [key, value] of gameEvents) {
+  if (key <= 45) console.log(`[FIRST HALF] ${key}: ${value}`);
+  if (key >= 45) console.log(`[SECOND HALF] ${key}: ${value}`);
 }
-// const restaurant = {
-//   name: 'Classico Italiano',
-//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
-//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
-//   // ES6 enhanced object literals
-//   openingHours,
-
-// order(starterIndex, mainIndex) {
-//   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-// },
-
-//   orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
-//     console.log(
-//       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
-//     );
-//   },
